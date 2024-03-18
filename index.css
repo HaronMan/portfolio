@@ -1,0 +1,37 @@
+.body {
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/** Header */
+
+.layout {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    padding-left: 1%;
+    background-color: rgb(0, 40, 92);
+}
+
+.navigation {
+    margin-top: 1.5%;
+    width: 39%;
+    height: 100%;
+}
+
+.button-navigation {
+    margin-right: 1%;
+    background: none;
+    border: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 150%;
+    color: white;  
+    transition: all .3s ease-in;
+}
+
+.button-navigation:hover {
+    cursor: pointer;
+    color: rgb(84, 186, 250);
+    border-bottom: 5px solid lightskyblue;
+}
