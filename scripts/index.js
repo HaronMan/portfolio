@@ -2,7 +2,7 @@ const contenu = document.getElementById("contenu")
 const current_stylesheet = document.getElementById("current_stylesheet")
 
 function changerContenu(name) {
-    fetch("../view/"+name+".html")
+    fetch("view/"+name+".html")
     .then(response => {
         if (!response.ok) {
             throw new Error('Erreur de chargement du fichier HTML');
@@ -11,7 +11,7 @@ function changerContenu(name) {
     })
     .then(html => {
         contenu.innerHTML = html;
-        current_stylesheet.href = "../assets/pages/"+name+".css"
+        current_stylesheet.href = "assets/pages/"+name+".css"
         console.log(current_stylesheet.href)
     })
     .catch(error => {
