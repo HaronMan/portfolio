@@ -2,6 +2,7 @@
     margin: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
+    min-height: 100%;
 }
 
 /** Header */
@@ -30,6 +31,12 @@
     transition: all .3s ease-in;
 }
 
+.button-navigation:hover {
+    cursor: pointer;
+    color: rgb(84, 186, 250);
+    border-bottom: 5px solid lightskyblue;
+}
+
 .button-navigation-selected {
     margin-right: 1%;
     background: none;
@@ -41,8 +48,29 @@
     /* TODO*/
 }
 
-.button-navigation:hover {
-    cursor: pointer;
-    color: rgb(84, 186, 250);
-    border-bottom: 5px solid lightskyblue;
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(34, 14, 71);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer_link {
+    color: white;
+    text-decoration: none;
+}
+
+.footer_link:hover {
+    color: burlywood;
+    text-decoration: none;
+}
+
+
+.footer_link img {
+    width: 35px;
+    height: auto;
+    filter: invert(75%)
 }
