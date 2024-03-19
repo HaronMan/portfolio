@@ -11,7 +11,7 @@
     justify-content: space-between;
     width: auto;
     padding-left: 1%;
-    background-color: rgb(0, 40, 92);
+    background-color: rgb(66, 33, 126);
 }
 
 .navigation {
@@ -28,6 +28,17 @@
     font-size: 150%;
     color: white;  
     transition: all .3s ease-in;
+}
+
+.button-navigation-selected {
+    margin-right: 1%;
+    background: none;
+    border: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 150%;
+    color: white;  
+    transition: all .3s ease-in;
+    /* TODO*/
 }
 
 .button-navigation:hover {
