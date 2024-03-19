@@ -10,19 +10,21 @@
 .layout {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
     width: auto;
     padding-left: 1%;
     background-color: rgb(66, 33, 126);
 }
 
 .navigation {
-    margin-top: 1.5%;
+    display: flex;
+    align-items: stretch;
+    margin: 0;
     width: 39%;
-    height: 100%;
 }
 
 .button-navigation {
-    margin-right: 1%;
+    width: 100%;
     background: none;
     border: none;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -33,17 +35,18 @@
 
 .button-navigation:hover {
     cursor: pointer;
-    color: rgb(84, 186, 250);
-    border-bottom: 5px solid lightskyblue;
+    color: rgb(66, 33, 126);
+    background-color: lightskyblue;
 }
 
 .button-navigation-selected {
-    margin-right: 1%;
+    width: 100%;
     background: none;
     border: none;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 150%;
-    color: white;  
+    background-color: white;
+    color: rgb(66, 33, 126);
     transition: all .3s ease-in;
     /* TODO*/
 }
