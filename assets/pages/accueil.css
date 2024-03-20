@@ -1,1 +1,63 @@
-/* TODO */
+.main {
+    display: flex;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.title {
+    font-size : 400%;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-125%);
+    animation: slide-in 1s forwards;
+}
+
+.text {
+    font-size: 125%;
+    transform: translateX(-125%);
+    animation: slide-in 1s forwards;
+    animation-delay: .3s;
+}
+
+.div_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform: translateX(-125%);
+    animation: slide-in 1s forwards;
+    animation-delay: .6s;
+}
+
+.contact-me {
+    padding: 3% 5%;
+    font-size: 150%;
+    color: white;
+    background-image: linear-gradient(144deg,#751db4, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 40px;
+    transition: all .4s ease;
+    box-shadow: 0 0 20px #7921b8;
+}
+
+.contact-me:hover {
+    letter-spacing: 3px;
+    font-size: 200%;
+    background-color: #0e3570;
+    box-shadow: 0 0 40px #7921b8;
+    cursor: pointer;
+}
+
+.contact-me:active {
+    font-size: 165%;
+    box-shadow: 0 0 20px #02afbb;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-125%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
