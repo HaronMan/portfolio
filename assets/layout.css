@@ -16,12 +16,13 @@
 }
 
 .navigation {
-    background-color: rgb(39, 39, 39);
+    background-color: rgb(41, 41, 41);
     display: flex;
     align-items: stretch;
     margin: 0;
     width: 50%;
     padding: .5%;
+    border: 2px solid rgb(82, 82, 82);
     border-radius: 30px;
 }
 
@@ -68,7 +69,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     background-color: rgb(34, 14, 71);
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
 }

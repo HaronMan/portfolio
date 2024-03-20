@@ -1,0 +1,63 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills {
+    width: 50%;
+}
+
+.competence{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+    opacity: 0;
+    transform: scale(0.3);
+    animation: apparition .5s forwards;
+}
+
+.details {
+    width: 40%;
+    padding: 2%;
+    border: 2px solid grey;
+    border-radius: 20px 0 0 20px;
+    border-right: none;
+    background-image: linear-gradient(144deg,#00b7c4, #5B42F3 50%,#751db4);
+}
+
+.details summary {
+    font-weight: bold;
+}
+
+.details[open] summary {
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(41, 39, 39);
+}
+
+.div_barre {
+    margin-left: 2%;
+    width: 100%;
+    background-color: rgb(59, 0, 73); 
+    border-radius: 0 20px 20px 0;
+}
+
+.barre {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(47, 47, 204);
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    } 
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
