@@ -13,9 +13,9 @@ function afficherCompetence(skill, delay) {
     div_barre.className = "div_barre"
 
     const barre = document.createElement("div")
-    barre.innerText = "0%"
     barre.className = "barre"
     barre.style.width = "0%"
+    barre.style.fontSize = "150%"
 
     div_barre.appendChild(barre)
 
