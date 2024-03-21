@@ -25,7 +25,7 @@ function changerContenu(nav_elt, con = false) {
                 }
                 let script = document.createElement("script")
                 script.id = nav_elt.id+"_script"
-                script.src = './portfolio/scripts/pages/'+nav_elt.id+'.js';
+                script.src = './scripts/pages/'+nav_elt.id+'.js';
                 script.type = 'text/javascript';
                 document.head.appendChild(script)
                 contenu.style.display = "block"
