@@ -17,7 +17,7 @@ function changerContenu(nav_elt, con = false) {
             setTimeout(() => {
                 contenu.style.display = "none"
                 contenu.innerHTML = html;
-                current_stylesheet.href = "assets/pages/"+nav_elt.id+".css"
+                current_stylesheet.href = "./assets/pages/"+nav_elt.id+".css"
                 let current_script = document.getElementById(current_nav.id+"_script")
                 console.log(current_script)
                 if(current_script !== null) {
@@ -25,7 +25,7 @@ function changerContenu(nav_elt, con = false) {
                 }
                 let script = document.createElement("script")
                 script.id = nav_elt.id+"_script"
-                script.src = '/scripts/pages/'+nav_elt.id+'.js';
+                script.src = './portfolio/scripts/pages/'+nav_elt.id+'.js';
                 script.type = 'text/javascript';
                 document.head.appendChild(script)
                 contenu.style.display = "block"
