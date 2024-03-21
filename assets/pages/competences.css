@@ -24,6 +24,7 @@
     border: 2px solid grey;
     border-radius: 20px 0 0 20px;
     border-right: none;
+    box-shadow: 0 0 30px purple;
     background-image: linear-gradient(144deg,#00b7c4, #5B42F3 50%,#751db4);
 }
 
@@ -39,7 +40,7 @@
 .div_barre {
     margin-left: 2%;
     width: 100%;
-    background-color: rgb(59, 0, 73); 
+    background-color: rgb(95, 0, 119); 
     border-radius: 0 20px 20px 0;
 }
 
@@ -48,7 +49,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0 20px 20px 0;
     background-color: rgb(47, 47, 204);
+    transition: width 1.5s ease-in-out;
 }
 
 @keyframes apparition {

@@ -63,31 +63,3 @@
     margin: 1%;
     transition: opacity .5s ease;
 }
-
-footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(34, 14, 71);
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer_link {
-    align-self: center;
-    color: white;
-    text-decoration: none;
-}
-
-.footer_link:hover {
-    color: burlywood;
-    text-decoration: none;
-}
-
-
-.footer_link img {
-    width: 35px;
-    height: auto;
-    filter: invert(75%)
-}

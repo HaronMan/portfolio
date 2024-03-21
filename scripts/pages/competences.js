@@ -13,15 +13,21 @@ function afficherCompetence(skill, delay) {
     div_barre.className = "div_barre"
 
     const barre = document.createElement("div")
-    barre.innerText = skill.value+"%"
+    barre.innerText = "0%"
     barre.className = "barre"
-    barre.style.width = skill.value+"%"
+    barre.style.width = "0%"
 
     div_barre.appendChild(barre)
 
     article.appendChild(details)
     article.appendChild(div_barre)
     competences.appendChild(article)
+
+    cpt = 0
+    setTimeout(() => {
+        barre.style.width = skill.value+"%"
+        barre.innerText = skill.value+"%"
+    }, 1000 + 200 * lst.length)
 }
 
 var lst = [
@@ -29,7 +35,7 @@ var lst = [
     {"name": "Java", "value": 90, "desc": "Maîtrise de Spring, Hibernate, Cucumber et JUnit"},
     {"name": "SQL", "value": 75, "desc": "Maîtrise de PostgreSQL et connaissance en SQLite"},
     {"name": "C", "value": 25, "desc": "Connaissances de bases"},
-    {"name": "HTML/CSS", "value": 70, "desc": ""},
+    {"name": "HTML/CSS", "value": 70, "desc": "Maîtrise assez important pour effectuer une bonne mise en page aisni qu'une bonne structure HTML"},
     {"name": "PHP", "value": 60, "desc": "Maîtrise de PDO et connaissance en PHPUnit"},
     {"name": "JavaScript", "value": 65, "desc": "Connaissance en Node.js"},
     {"name": "Android", "value": 35, "desc": "Utilisation et connaissance de bases"},
