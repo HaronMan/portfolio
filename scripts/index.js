@@ -53,7 +53,7 @@ const nav = [
     document.getElementById("contacter"),
 ]
 
-current_nav = nav[1]
+current_nav = nav[0]
 changerContenu(current_nav, true)
 
 nav.forEach(elt => {

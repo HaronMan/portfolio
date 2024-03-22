@@ -1,0 +1,43 @@
+h1, h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2, hr {
+    animation-delay: 2s;
+    animation: apparition 1.5s forwards;
+}
+
+.paragraphe {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 5%;
+    animation-delay: 2s;
+    animation: apparition 1.5s forwards;
+}
+
+.paragraphe img {
+    max-width: 20%;
+    box-shadow: 0 0 50px #9a2aeb;
+    border-radius: 20px;
+    animation: apparition_img 1.5s forwards;
+}
+
+.paragraphe div {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 140%;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(150%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
