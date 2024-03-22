@@ -1,0 +1,48 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragraphe {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 5%;
+}
+
+.paragraphe img {
+    max-width: 20%;
+    box-shadow: 0 0 50px #02c3d1;
+    border-radius: 20px;
+    animation: apparition_img 1.5s forwards;
+}
+
+.paragraphe p {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 150%;
+    animation: apparition_txt 1.5s forwards;
+}
+
+@keyframes apparition_txt {
+    from {
+        opacity: 0;
+        transform: scale(.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes apparition_img {
+    from {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
