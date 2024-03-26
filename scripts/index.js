@@ -45,6 +45,26 @@ function replaceNav(nav_elt) {
     current_nav = nav_elt
 }
 
+/* Si menu burger actif */
+document.getElementById('alt_nav').addEventListener("click", () => {
+    document.getElementById('navigation').classList.toggle("active")
+    if(contenu.style.filter === "blur(5px)") {
+        contenu.style.filter = "blur(0px)"
+    } else {
+        contenu.style.filter = "blur(5px)"
+    }
+})
+
+/* Si la fenetre redevient supérieur à 1050px en plein dans le menu burger actif */
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 1050) {
+        if(contenu.style.filter === "blur(5px)") {
+            document.getElementById('navigation').classList.toggle("active")
+            contenu.style.filter = "blur(0px)"
+        }
+    }
+})
+
 const nav = [
     document.getElementById("accueil"),
     document.getElementById("qsj"),

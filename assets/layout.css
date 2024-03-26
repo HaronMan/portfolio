@@ -7,16 +7,17 @@
 }
 
 /** Header */
-
 .layout {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    width: auto;
+    position: sticky;
+    top: 1px;
     padding: 1%;
+    background-color: rgb(56, 0, 56);
 }
 
-.navigation {
+#navigation {
     background-color: rgb(41, 41, 41);
     display: flex;
     align-items: stretch;
@@ -25,6 +26,11 @@
     padding: .5%;
     border: 2px solid rgb(82, 82, 82);
     border-radius: 30px;
+}
+
+#alt_nav {
+    cursor: pointer;
+    display: none;
 }
 
 .button-navigation {
@@ -61,6 +67,43 @@
 }
 
 .contenu {
-    margin: 1%;
-    transition: opacity .5s ease;
+    max-width: 95%;
+    transition: opacity .5s ease, filter .5s ease;
+}
+
+@media (max-width: 1050px) {
+    #alt_nav {
+        display: block;
+        transform: scale(2.5);
+        margin-top: 40px;
+        margin-right: 3%; 
+    }
+    #alt_nav::before {
+        content: "\2630";
+    }
+
+    .active #alt_nav::before {
+        content: "\2715";
+    }
+
+    #navigation {
+        position: fixed;
+        right: -100%;
+        top: 10%;
+        bottom: 0;
+        flex-direction: column;
+        background-color: rgb(56, 0, 56);
+        text-align: center;
+        border: none;
+        border-radius: 0;
+        z-index: 1;
+        transition: .5s ease;
+    }
+    #navigation button {
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+    }
+    #navigation.active {
+        right: 0;
+    }
 }
