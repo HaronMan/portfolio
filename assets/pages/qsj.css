@@ -1,7 +1,9 @@
-h1 {
+.titre_qsj {
+    font-size: clamp(22px, 3vw, 27px);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1%
 }
 
 .paragraphe {
@@ -11,18 +13,26 @@ h1 {
     margin: 5%;
 }
 
-.paragraphe img {
-    max-width: 20%;
-    box-shadow: 0 0 50px #02c3d1;
-    border-radius: 20px;
-    animation: apparition_img 1.5s forwards;
+.paragraphe-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 5%;
 }
 
-.paragraphe p {
+.paragraphe img, .paragraphe-reverse img {
+    width: 25%;
+    box-shadow: 0 0 50px #02c3d1;
+    border-radius: 20px;
+    animation: apparition_img 1s ease-out forwards;
+}
+
+.paragraphe p, .paragraphe-reverse p {
     margin-left: 5%;
     margin-right: 5%;
-    font-size: 150%;
-    animation: apparition_txt 1.5s forwards;
+    font-size: clamp(17px, 2vw, 23px);
+    animation: apparition_txt 1s ease-out forwards;
 }
 
 @keyframes apparition_txt {
@@ -39,10 +49,21 @@ h1 {
 @keyframes apparition_img {
     from {
         opacity: 0;
-        transform: rotate(360deg);
+        transform: scale(.25);
     }
     to {
         opacity: 1;
-        transform: rotate(0deg);
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1050px) {
+    .paragraphe, .paragraphe-reverse {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paragraphe img, .paragraphe-reverse img {
+        width: 60%;
     }
 }

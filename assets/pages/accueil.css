@@ -1,22 +1,36 @@
 .main {
     display: flex;
-    margin-left: 5%;
-    margin-top: 5%;
+    margin: 5%;
+    margin-bottom: none;
+    width: 100%;
+}
+
+.accueil {
+    margin-right: 5%
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide-in-right 1s forwards;
+    width: 100%;
 }
 
 .title {
-    font-size : 400%;
+    font-size : clamp(35px, 7vw, 50px);;
     padding: 0;
     margin: 0;
     transform: translateX(-125%);
     animation: slide-in 1s forwards;
+    animation-delay: .2s;
 }
 
 .text {
-    font-size: 125%;
+    font-size: clamp(20px, 5vw, 25px);
     transform: translateX(-125%);
     animation: slide-in 1s forwards;
-    animation-delay: .3s;
+    animation-delay: .5s;
 }
 
 .div_button {
@@ -26,7 +40,7 @@
     height: 100%;
     transform: translateX(-125%);
     animation: slide-in 1s forwards;
-    animation-delay: .6s;
+    animation-delay: .8s;
 }
 
 .contact-me {
@@ -59,5 +73,35 @@
     }
     to {
         transform: translateX(0%);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(300%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@media (max-width: 1500px){
+    .main {
+        flex-direction: column-reverse;
+    }
+
+    .accueil {
+        margin-top: 10%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image img {   
+        max-width: 50%;
+        animation: slide-in 1s forwards;
+    }
+
+    .contact-me {
+        margin-top: 5vh;
     }
 }

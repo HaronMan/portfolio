@@ -1,25 +1,33 @@
-h1, h2 {
+h2, h3 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-h2, hr {
+h3, hr {
     animation-delay: 2s;
     animation: apparition 1.5s forwards;
+}
+
+h2 {
+    font-size: clamp(20px, 3vw, 28px);
+}
+
+h3 {
+    font-size: clamp(17px, 3vw, 22px);
 }
 
 .paragraphe {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin: 5%;
     animation-delay: 2s;
     animation: apparition 1.5s forwards;
 }
 
 .paragraphe img {
-    max-width: 20%;
+    width: 20%;
     box-shadow: 0 0 50px #9a2aeb;
     border-radius: 20px;
     animation: apparition_img 1.5s forwards;
@@ -28,7 +36,7 @@ h2, hr {
 .paragraphe div {
     margin-left: 5%;
     margin-right: 5%;
-    font-size: 140%;
+    font-size: clamp(17px, 3vw, 22px);
 }
 
 @keyframes apparition {
@@ -39,5 +47,16 @@ h2, hr {
     to {
         opacity: 1;
         transform: translateY(0%);
+    }
+}
+
+@media (max-width: 1050px) {
+    .paragraphe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paragraphe img {
+        width: 45%
     }
 }
