@@ -85,7 +85,7 @@
     }
 }
 
-@media screen and (max-width: 1500px){
+@media (max-width: 1500px){
     .main {
         flex-direction: column-reverse;
     }
@@ -96,9 +96,12 @@
         align-items: center;
     }
 
-    .image img {
-        
+    .image img {   
         max-width: 50%;
         animation: slide-in 1s forwards;
+    }
+
+    .contact-me {
+        margin-top: 5vh;
     }
 }
