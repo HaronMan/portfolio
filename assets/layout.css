@@ -30,17 +30,20 @@
     display: none;
 }
 
-.button-navigation {
+.button-navigation, .button-navigation-selected {
     width: 100%;
     margin-left: .5%;
     margin-right: .5%;
     background: none;
     border: none;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 150%;
-    color: white;
     border-radius: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: clamp(17px, 3vw, 22px);
     transition: all .3s ease-in;
+}
+
+.button-navigation {
+    color: white;
 }
 
 .button-navigation:hover {
@@ -50,14 +53,6 @@
 }
 
 .button-navigation-selected {
-    width: 100%;
-    margin-left: .5%;
-    margin-right: .5%;
-    background: none;
-    border: none;
-    border-radius: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 150%;
     background-color: white;
     color: rgb(66, 33, 126);
     transition: all .3s ease-in;
