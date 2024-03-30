@@ -65,7 +65,7 @@ document.getElementById('alt_nav').addEventListener("click", () => {
 window.addEventListener("resize", () => {
     if (window.innerWidth > 1050) {
         if(contenu.style.filter === "blur(5px)") {
-            navigation.classList.toggle("active")
+            navigation.classList.remove("active")
             contenu.style.filter = "blur(0px)"
         }
     }

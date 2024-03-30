@@ -23,7 +23,7 @@
 }
 
 .details {
-    width: 40%;
+    width: 50%;
     padding: 2%;
     border: 2px solid grey;
     border-radius: 20px 0 0 20px;
@@ -34,6 +34,7 @@
 
 .details summary {
     font-weight: bold;
+    font-size: clamp(15px, 3vw, 20px);
 }
 
 .details[open] summary {
@@ -53,6 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: clamp(15px, 3vw, 20px);
     border-radius: 0 20px 20px 0;
     background-color: rgb(47, 47, 204);
     transition: width 1.5s ease-in-out;
